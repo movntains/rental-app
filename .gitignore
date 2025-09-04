@@ -1,0 +1,28 @@
+# Dependencies
+**/node_modules/
+
+# Next.js
+client/.next/
+client/out/
+
+# Production Files
+**/dist/
+client/build
+
+# Miscellaneous
+.DS_Store
+*.pem
+
+# Debug
+**/npm-debug.log*
+
+# Environment Files
+**/.env*
+
+# TypeScript
+**/*.tsbuildinfo
+client/next-env.d.ts
+
+# IDEs and Editors
+.vscode/*
+.idea/*
