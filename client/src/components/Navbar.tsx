@@ -8,11 +8,14 @@ import { authLinks } from '@/lib/links'
 
 export default function Navbar() {
   return (
-    <div
+    <header
       className="fixed top-0 left-0 z-50 w-full shadow"
       style={{ height: `${NAVBAR_HEIGHT}px` }}
     >
-      <div className="flex w-full items-center justify-between bg-gray-900 px-8 py-3 text-white">
+      <nav
+        aria-label="Main"
+        className="flex w-full items-center justify-between bg-gray-900 px-8 py-3 text-white"
+      >
         <div className="flex items-center gap-4 md:gap-6">
           <Link
             href="/"
@@ -61,7 +64,7 @@ export default function Navbar() {
             <Link href={authLinks.REGISTER}>Sign Up</Link>
           </Button>
         </div>
-      </div>
-    </div>
+      </nav>
+    </header>
   )
 }
