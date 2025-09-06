@@ -35,9 +35,9 @@ export default function Discover() {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: true, amount: 0.5 }}
       variants={CONTAINER_VARIANTS}
-      className="mb-16 bg-white py-12"
+      className="mb-28 bg-white py-12"
     >
       <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-12 xl:max-w-7xl xl:px-16">
         <motion.div
