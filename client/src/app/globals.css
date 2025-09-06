@@ -121,7 +121,8 @@
     @apply bg-background text-foreground;
   }
 
-  a {
-    @apply cursor-pointer transition-colors duration-200;
+  a,
+  button {
+    @apply !cursor-pointer transition-colors duration-200;
   }
 }

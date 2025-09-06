@@ -1,3 +1,4 @@
+import { MotionConfig } from 'motion/react'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { ReactNode } from 'react'
@@ -25,7 +26,9 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <MotionConfig reducedMotion="user">{children}</MotionConfig>
+        </Providers>
       </body>
     </html>
   )
