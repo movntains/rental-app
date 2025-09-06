@@ -2,7 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
+
 import { NAVBAR_HEIGHT } from '@/lib/constants'
+import { authLinks } from '@/lib/links'
 
 export default function Navbar() {
   return (
@@ -15,8 +17,15 @@ export default function Navbar() {
           <Link
             href="/"
             className="group hover:text-gray-300"
+            aria-labelledby="home-link-text"
             scroll={false}
           >
+            <span
+              className="sr-only"
+              id="home-link-text"
+            >
+              Home
+            </span>
             <div className="flex items-center gap-3">
               <Image
                 src="/logo.svg"
@@ -41,7 +50,7 @@ export default function Navbar() {
             variant="outline"
             className="rounded-lg border-white bg-transparent text-white hover:bg-white hover:text-gray-700"
           >
-            <Link href="/login">Sign In</Link>
+            <Link href={authLinks.LOGIN}>Sign In</Link>
           </Button>
 
           <Button
@@ -49,7 +58,7 @@ export default function Navbar() {
             variant="secondary"
             className="rounded-lg bg-cyan-700 text-white hover:bg-white hover:text-gray-700"
           >
-            <Link href="/register">Sign Up</Link>
+            <Link href={authLinks.REGISTER}>Sign Up</Link>
           </Button>
         </div>
       </div>
