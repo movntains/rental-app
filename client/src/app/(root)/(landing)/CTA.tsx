@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 
 import { authLinks } from '@/lib/links'
 
-export default function CallToAction() {
+export default function CTA() {
   const handleSearchButtonClick = (): void => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
@@ -55,7 +55,8 @@ export default function CallToAction() {
                 onClick={handleSearchButtonClick}
                 className="rounded-lg border-none px-6 py-5 font-semibold text-gray-700 hover:bg-gray-600 hover:text-gray-50"
               >
-                Search
+                <span className="sr-only">Go to </span>
+                <span>Search</span>
               </Button>
 
               <Button
