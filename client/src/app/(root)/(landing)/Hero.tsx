@@ -12,9 +12,10 @@ export default function Hero() {
     <div className="relative h-screen">
       <Image
         src="/landing-splash.jpg"
-        alt=""
+        alt="Pool in the backyard of a modern home"
         fill
         className="object-cover object-center"
+        aria-hidden="true"
         priority
       />
 
